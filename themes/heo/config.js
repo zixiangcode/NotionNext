@@ -12,8 +12,8 @@ const CONFIG = {
   // 英雄区(首页顶部大卡)
   HERO_TITLE_1: '记录成长',
   HERO_TITLE_2: '勉励自己',
-  HERO_TITLE_3: 'ZiXiang',
-  HERO_TITLE_4: 'ZIXIANGCODE.GITHUB.IO',
+  HERO_TITLE_3: 'ZIXIANGCODE.GITHUB.IO',
+  HERO_TITLE_4: 'ZiXiang',
   HERO_TITLE_5: '要技艺超群，要予人温暖',
   HERO_TITLE_LINK: 'https://github.com/zixiangcode',
 
