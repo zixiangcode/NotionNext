@@ -1,7 +1,7 @@
 const CONFIG = {
   HOME_BANNER_ENABLE: true,
 
-  SITE_CREATE_TIME: '2021-09-21', // 建站日期，用于计算网站运行的第几天
+  SITE_CREATE_TIME: '2023-06-14', // 建站日期，用于计算网站运行的第几天
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   NOTICE_BAR: [
@@ -12,15 +12,15 @@ const CONFIG = {
   // 英雄区(首页顶部大卡)
   HERO_TITLE_1: '记录成长',
   HERO_TITLE_2: '勉励自己',
-  HERO_TITLE_3: 'ZIXIANGCODE.GITHUB.IO',
+  HERO_TITLE_3: 'ZIXIANGCODE.TOP',
   HERO_TITLE_4: 'ZiXiang',
   HERO_TITLE_5: '要技艺超群，要予人温暖',
   HERO_TITLE_LINK: 'https://github.com/zixiangcode',
 
   // 英雄区显示三个置顶分类
-  HERO_CATEGORY_1: { title: '实用链接', url: 'https://notion-next-henna-beta.vercel.app/links?theme=heo' },
-  HERO_CATEGORY_2: { title: '往期整理', url: 'https://notion-next-henna-beta.vercel.app/archive?theme=heo' },
-  HERO_CATEGORY_3: { title: 'About Me', url: 'https://notion-next-henna-beta.vercel.app/about?theme=heo' },
+  HERO_CATEGORY_1: { title: '实用链接', url: 'https://zixiangcode.top/links?theme=heo' },
+  HERO_CATEGORY_2: { title: '往期整理', url: 'https://zixiangcode.top/archive?theme=heo' },
+  HERO_CATEGORY_3: { title: 'About Me', url: 'https://zixiangcode.top/about?theme=heo' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HERO_RECOMMEND_POST_TAG: '推荐',
@@ -28,13 +28,10 @@ const CONFIG = {
 
   // 右侧个人资料卡牌欢迎语，点击可自动切换
   INFOCARD_GREETINGS: [
-    '你好！我是',
-    '🔍 分享与热心帮助',
-    '🤝 专修交互与设计',
-    '🏃 脚踏实地行动派',
-    '🏠 智能家居小能手',
-    '🤖️ 数码科技爱好者',
-    '🧱 团队小组发动机'
+    '你好！这里是ZiXiang',
+    '🔍 不懂就问，不会就学',
+    '🏃 记录生活，勉励自己',
+    '🤖️ 又菜又爱玩'
   ],
   INFO_CARD_URL: 'https://github.com/zixiangcode', // 个人资料底部按钮链接
 
