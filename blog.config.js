@@ -5,7 +5,7 @@ const BLOG = {
         process.env.NOTION_PAGE_ID || '02ab3b8678004aa69e9e415905ef32a5',
   PSEUDO_STATIC: process.env.NEXT_PUBLIC_PSEUDO_STATIC || false, // 伪静态路径，开启后所有文章URL都以 .html 结尾。
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 5, // 更新内容缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
-  THEME: process.env.NEXT_PUBLIC_THEME || 'hexo', // 主题， 支持 ['next','hexo',"fukasawa','medium','example','matery','gitbook','simple'] @see https://preview.tangly1024.com
+  THEME: process.env.NEXT_PUBLIC_THEME || 'fukasawa', // 主题， 支持 ['next','hexo',"fukasawa','medium','example','matery','gitbook','simple'] @see https://preview.tangly1024.com
   THEME_SWITCH: process.env.NEXT_PUBLIC_THEME_SWITCH || true, // 是否显示切换主题按钮
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: 2023, // e.g if leave this empty, current year will be used.
@@ -18,7 +18,7 @@ const BLOG = {
   CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || true, // 支持Menu 类型，从3.12.0版本起，各主题将逐步支持灵活的二级菜单配置，替代了原来的Page类型，此配置是试验功能、默认关闭。
 
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'ZiXiangCode', // 您的昵称 例如 tangly1024
-  BIO: process.env.NEXT_PUBLIC_BIO || '一个尝试救赎自己的菜狗', // 作者简介
+  BIO: process.env.NEXT_PUBLIC_BIO || '菜且爱玩', // 作者简介
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://zixiangcode.github.io', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客', // 网站关键词 英文逗号隔开
 
@@ -113,7 +113,7 @@ const BLOG = {
   PRISM_THEME_DARK_PATH: process.env.NEXT_PUBLIC_PRISM_THEME_DARK_PATH || 'https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css', // 深色模式主题
 
   CODE_MAC_BAR: process.env.NEXT_PUBLIC_CODE_MAC_BAR || true, // 代码左上角显示mac的红黄绿图标
-  CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || 'true', // 是否显示行号
+  CODE_LINE_NUMBERS: process.env.NEXT_PUBLIC_CODE_LINE_NUMBERS || true, // 是否显示行号
   CODE_COLLAPSE: process.env.NEXT_PUBLIC_CODE_COLLAPSE || true, // 是否折叠代码框
   // END********代码相关********
 
