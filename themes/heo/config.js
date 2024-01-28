@@ -9,6 +9,11 @@ const CONFIG = {
     { title: '欢迎与我联系', url: 'https://github.com/zixiangcode/zixiangcode/issues' }
   ],
 
+  // 英雄区左右侧组件颠倒位置
+  HEO_HERO_REVERSE: false,
+  // 博客主体区左右侧组件颠倒位置
+  HEO_HERO_BODY_REVERSE: false,
+
   // 英雄区(首页顶部大卡)
   HEO_HERO_TITLE_1: '记录成长',
   HEO_HERO_TITLE_2: '勉励自己',

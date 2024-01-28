@@ -1,6 +1,6 @@
 import CONFIG from './config'
 import CommonHead from '@/components/CommonHead'
-import { useEffect, useRef } from 'react'
+import { createContext, useContext, useEffect, useRef } from 'react'
 import Footer from './components/Footer'
 import SideRight from './components/SideRight'
 import TopNav from './components/TopNav'
@@ -32,6 +32,12 @@ import { Transition } from '@headlessui/react'
 import { Style } from './style'
 import replaceSearchResult from '@/components/Mark'
 import { siteConfig } from '@/lib/config'
+import AlgoliaSearchModal from '@/components/AlgoliaSearchModal'
+
+
+// 主题全局状态
+const ThemeGlobalHexo = createContext()
+export const useHexoGlobal = () => useContext(ThemeGlobalHexo)
 
 /**
  * 基础布局 采用左右两侧布局，移动端使用顶部导航栏
@@ -41,9 +47,13 @@ import { siteConfig } from '@/lib/config'
  */
 const LayoutBase = props => {
   const { children, headerSlot, floatSlot, slotTop, meta, className } = props
-  const { onLoading } = useGlobal()
+  const { onLoading, fullWidth } = useGlobal()
+  
+  // Algolia搜索框
+  const searchModal = useRef(null)
 
   return (
+    <ThemeGlobalHexo.Provider value={{ searchModal }}>
         <div id='theme-hexo'>
             {/* 网页SEO */}
             <CommonHead meta={meta}/>
@@ -70,7 +80,7 @@ const LayoutBase = props => {
             {/* 主区块 */}
             <main id="wrapper" className={`${siteConfig('HEXO_HOME_BANNER_ENABLE', null, CONFIG) ? '' : 'pt-16'} bg-hexo-background-gray dark:bg-black w-full py-8 md:px-8 lg:px-24 min-h-screen relative`}>
                 <div id="container-inner" className={(JSON.parse(siteConfig('LAYOUT_SIDEBAR_REVERSE')) ? 'flex-row-reverse' : '') + ' w-full mx-auto lg:flex lg:space-x-4 justify-center relative z-10'} >
-                    <div className={`${className || ''} w-full max-w-4xl h-full overflow-hidden`}>
+                    <div className={`${className || ''} w-full ${fullWidth ? '' : 'max-w-4xl'} h-full overflow-hidden`}>
 
                         <Transition
                             show={!onLoading}
@@ -98,9 +108,13 @@ const LayoutBase = props => {
             {/* 悬浮菜单 */}
             <RightFloatArea floatSlot={floatSlot} />
 
+            {/* 全文搜索 */}
+            <AlgoliaSearchModal cRef={searchModal} {...props}/>
+
             {/* 页脚 */}
             <Footer title={siteConfig('TITLE') } />
         </div>
+    </ThemeGlobalHexo.Provider>
   )
 }
 
