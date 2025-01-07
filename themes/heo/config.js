@@ -1,4 +1,7 @@
 const CONFIG = {
+  HEO_HOME_POST_TWO_COLS: true, // 首页博客两列显示，若为false则只显示一列
+  HEO_LOADING_COVER: true, // 页面加载的遮罩动画
+
   HEO_HOME_BANNER_ENABLE: true,
 
   HEO_SITE_CREATE_TIME: '2023-06-14', // 建站日期，用于计算网站运行的第几天
@@ -21,6 +24,8 @@ const CONFIG = {
   HEO_HERO_TITLE_4: 'ZiXiang',
   HEO_HERO_TITLE_5: '要技艺超群，要温良恭谦让',
   HEO_HERO_TITLE_LINK: 'https://github.com/zixiangcode',
+	// 英雄区遮罩文字
+  HEO_HERO_COVER_TITLE: '随便逛逛',
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '实用链接', url: 'https://zixiangcode.top/links?theme=heo' },
@@ -40,7 +45,12 @@ const CONFIG = {
     '🏃 记录生活，勉励自己',
     '🤖️ 又菜又爱玩'
   ],
-  HEO_INFO_CARD_URL: 'https://github.com/zixiangcode', // 个人资料底部按钮链接
+
+	// 个人资料底部按钮
+  HEO_INFO_CARD_URL1: '/about',
+  HEO_INFO_CARD_ICON1: 'fas fa-user',
+  HEO_INFO_CARD_URL2: 'https://github.com/zixiangcode',
+  HEO_INFO_CARD_ICON2: 'fab fa-github',
 
 
   // 用户技能图标
@@ -108,6 +118,12 @@ const CONFIG = {
   HEO_SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
   HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
   HEO_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/article/how-to-question',
+
+  // 底部统计面板文案
+  HEO_POST_COUNT_TITLE: '文章数:',
+  HEO_SITE_TIME_TITLE: '建站天数:',
+  HEO_SITE_VISIT_TITLE: '访问量:',
+  HEO_SITE_VISITOR_TITLE: '访客数:',
 
 
   // *****  以下配置无效，只是预留开发 ****
